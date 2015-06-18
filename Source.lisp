@@ -1,6 +1,4 @@
 ;Jacob Besse
-;4/19/2015
-;CS450
 ;LISP Program
 
 ;TO RUN: In gcl compiler > (load "lisp_besse.lisp")
@@ -61,7 +59,6 @@
 	)
 )
 
-; grader: overcommented.  -1
 	
 ;This function calls fitIn which inserts the number into the proper location in the node.
 ;Or if the node is full calls expand with finds the child of the node to place the number into.
@@ -75,7 +72,6 @@
 		(T 
 
 			(cond
-; grader: don't use (T (COND...; just continue the previous COND.   -1
 				;If nils have not been added to node, add them.
 				((= (list-length L) Size)
 					(expand L A nil 1 Size))
@@ -92,7 +88,6 @@
 ;L2 is the list that was read in.
 ;Size is the size of the tree wanted.
 (defun createTree (L1 L2 Size)
-; grader: extra point for adaptive arity. +0.5
 	(cond
 		;If the read in list is empty the tree is complete, return the list.
 		((null (car L2))  L1)
@@ -120,4 +115,3 @@
 	(createTree nil (READ(OPEN(READ)))  (- Size 1))
 )
 
-; grader: Should print the tree after each insertion.  -2
