@@ -13,7 +13,6 @@
 
 
 ;This function adds a number to the node. It is only called if the node is not full.
-; grader: please restrict lines to 80 characters.  -0
 ;L is the list, C is the number to be added and M is an accumulator list.
 (defun fitIn (L C M)
 	(cond
